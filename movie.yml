@@ -8,11 +8,6 @@ spring:
     database: MYSQL
     hibernate:
       ddl-auto: none
-  datasource:
-    url: jdbc:mysql://ec2-54-149-137-3.us-west-2.compute.amazonaws.com/demo
-    username: demo_user
-    password: demo_pass
-    driver-class-name: com.mysql.jdbc.Driver
 server:
   port: 9006
 eureka:
