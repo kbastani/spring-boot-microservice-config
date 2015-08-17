@@ -16,6 +16,7 @@ eureka:
       defaultZone: http://discovery-77.cfapps.io/eureka/
   instance:
     hostname: movie-77.cfapps.io
+    nonSecurePort: 80
 ribbon:
   eureka:
     enabled: true
