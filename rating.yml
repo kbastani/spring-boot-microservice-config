@@ -2,9 +2,9 @@ spring:
   profiles:
     active: cloud
 ---
+
 spring:
-  profiles:
-    name: cloud
+  profiles: cloud
   cloud:
     config:
       enabled: true
@@ -28,10 +28,11 @@ eureka:
 ribbon:
   eureka:
     enabled: true
+    
 ---
+
 spring:
-  profiles:
-    name: development
+  profiles: development
 server:
   port: 9004
 eureka:

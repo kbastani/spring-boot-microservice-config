@@ -1,6 +1,8 @@
 spring:
-  profiles.active: cloud
+  profiles:
+    active: cloud
 ---
+
 spring:
   profiles: cloud
   cloud:
@@ -34,7 +36,9 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://discovery-77.cfapps.io/eureka/
+      
 ---
+
 spring:
   profiles: development
   cloud:
