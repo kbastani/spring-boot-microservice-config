@@ -1,13 +1,26 @@
+spring:
+  profiles.active: cloud
+---
+spring:
+  profiles: cloud
+  jpa:
+    show_sql: false
+    database: MYSQL
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:mysql://ec2-54-149-137-3.us-west-2.compute.amazonaws.com/demo
+    username: demo_user
+    password: demo_pass
+    driver-class-name: com.mysql.jdbc.Driver
 server:
-  port: 10001
-
+  port: 9006
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://discovery-77.cfapps.io/eureka
   instance:
     preferIpAddress: true
-
 ribbon:
   eureka:
     enabled: true
