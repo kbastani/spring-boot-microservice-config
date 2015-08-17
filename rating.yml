@@ -1,8 +1,13 @@
 spring:
-  profiles.active: cloud
+  profiles:
+    active: cloud
 ---
 spring:
-  profiles: cloud
+  profiles:
+    name: cloud
+  cloud:
+    config:
+      enabled: true
 server:
   port: 9004
 neo4j:
@@ -25,7 +30,8 @@ ribbon:
     enabled: true
 ---
 spring:
-  profiles: development
+  profiles:
+    name: development
 server:
   port: 9004
 eureka:
