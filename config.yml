@@ -14,6 +14,8 @@ spring:
           repositories:
             movie:
               label: master
+            rating:
+              label: master
 server:
   port: 8888
 endpoints:
@@ -25,7 +27,8 @@ endpoints:
     sensitive: false
 eureka:
   instance:
-    hostname: configserver
+    hostname: config-99.cfapps.io
+    nonSecurePort: 80
   client:
     registerWithEureka: true
     fetchRegistry: true
