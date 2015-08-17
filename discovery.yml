@@ -1,15 +1,46 @@
+spring:
+  profiles.active: cloud
 ---
 spring:
-  profiles: cloudpeers
+  profiles: cloud
+  cloud:
+    config:
+      discovery:
+        enabled: true
+server:
+  port: 8761
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
 eureka:
+  instance:
+    hostname: discovery
   client:
+    registerWithEureka: false
+    fetchRegistry: false
     serviceUrl:
-      defaultZone: ${http://${PREFIX:}othereureka.${application.domain:cfapps.io}}/eureka/
-
+      defaultZone: http://discovery-77.cfapps.io/eureka/
 ---
 spring:
-  profiles: docker
+  profiles: development
+server:
+  port: 8761
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
 eureka:
+  instance:
+    hostname: discovery
   client:
+    registerWithEureka: false
+    fetchRegistry: false
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://discovery:8761/eureka/
