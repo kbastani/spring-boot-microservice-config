@@ -1,0 +1,38 @@
+spring:
+  profiles:
+    active: lattice
+---
+
+spring:
+  profiles: lattice
+  cloud:
+    config:
+      discovery:
+        enabled: true
+      server:
+        git:
+          uri: https://github.com/kbastani/spring-boot-microservice-config
+        health:
+          repositories:
+            movie:
+              label: lattice
+            rating:
+              label: lattice
+server:
+  port: 8888
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+eureka:
+  instance:
+    hostname: config.54.149.244.237.xip.io
+    nonSecurePort: 80
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://discovery.54.149.244.237.xip.io/eureka/
