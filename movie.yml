@@ -2,7 +2,6 @@ spring:
   profiles:
     active: cloud
 ---
-
 spring:
   profiles: cloud
   jpa:
@@ -23,6 +22,8 @@ ribbon:
   eureka:
     enabled: true
 ---
+application:
+  name: movie
 spring:
   profiles: lattice
   jpa:
