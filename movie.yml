@@ -35,7 +35,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${vcap.service.discovery:http://localhost:8761/eureka/}
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://localhost:8761/eureka/}
   instance:
     hostname: ${vcap.application.uris[0]:localhost:9006}
     nonSecurePort: 80
