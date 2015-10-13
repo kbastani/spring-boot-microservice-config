@@ -26,11 +26,6 @@ application:
   name: movie
 spring:
   profiles: lattice
-  jpa:
-    show_sql: false
-    database: hsqldb
-    hibernate:
-      ddl-auto: create-drop
 server:
   port: 9006
 eureka:
