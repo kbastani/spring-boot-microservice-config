@@ -8,8 +8,6 @@ spring:
   cloud:
     config:
       enabled: true
-server:
-  port: 9004
 neo4j:
   uri: ${NEO4J_URI}
   username: neo4j
