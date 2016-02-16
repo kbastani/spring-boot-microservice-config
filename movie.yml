@@ -9,8 +9,6 @@ spring:
     database: MYSQL
     hibernate:
       ddl-auto: none
-server:
-  port: 9006
 eureka:
   client:
     serviceUrl:
