@@ -14,9 +14,9 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://discovery-77.cfapps.io/eureka/
+      defaultZone: http://discovery-kb.cfapps.io/eureka/
   instance:
-    hostname: movie-77.cfapps.io
+    hostname: movie-kb.cfapps.io
     nonSecurePort: 80
 ribbon:
   eureka:
@@ -56,7 +56,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://discovery-77.cfapps.io/eureka/
+      defaultZone: http://discovery-kb.cfapps.io/eureka/
   instance:
     preferIpAddress: true
 ribbon:

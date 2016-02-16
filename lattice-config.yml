@@ -29,7 +29,7 @@ endpoints:
     sensitive: false
 eureka:
   instance:
-    hostname: config.54.149.244.237.xip.io
+    hostname: ${vcap.application.uris[0]:localhost:8888}
     nonSecurePort: 80
   client:
     registerWithEureka: true

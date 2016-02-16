@@ -21,14 +21,14 @@ aws:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://discovery-77.cfapps.io/eureka/
+      defaultZone: http://discovery-kb.cfapps.io/eureka/
   instance:
-    hostname: rating-77.cfapps.io
+    hostname: rating-kb.cfapps.io
     nonSecurePort: 80
 ribbon:
   eureka:
     enabled: true
-    
+
 ---
 
 spring:
